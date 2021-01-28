@@ -109,23 +109,28 @@ function myFun() {
 #### In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
 #### 
 
-`function nextInLine(arr, item) {
+```javascript
+function nextInLine(arr, item) {
     arr.push(item);
 return arr.shift();
-}`
+}
 
-`var testArr = [1,2,3,4,5];`
+var testArr = [1,2,3,4,5];
 
-`console.log("Before: " + JSON.stringify(testArr));
+console.log("Before: " + JSON.stringify(testArr));
 console.log(nextInLine(testArr, 6));
-console.log("After: " + JSON.stringify(testArr));`
+console.log("After: " + JSON.stringify(testArr));
 
+```
 #### We create a queue with array which we assign to a variable. We can modify the array by passing item, arr to it. In this case we add item in the end and we get item from the front of the queu. 
 #### We will get:
 
-`Before: [1,2,3,4,5]
+```
+Before: [1,2,3,4,5]
 1
 After: [2,3,4,5,6]`
+```
+
 
 ---
 ### Boolean values
@@ -198,7 +203,7 @@ testStrict(10);
 
 ```javascript
 function compareEquality(a, b) {
-  if (a === b) { // Change this line
+  if (a === b) { 
     return "Equal";
   }
   return "Not Equal";
@@ -213,6 +218,5 @@ compareEquality(10, "10");
 
 ---
 
-### Comparison with the inequality operator
 
 

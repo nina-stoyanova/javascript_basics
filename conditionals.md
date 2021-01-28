@@ -64,5 +64,264 @@ return "Yes, it is true";
 ---
 
 ### Comparison with the inequality operator
+#### The inequality operator (!=) is the opposite of the equality operator. It means "Not Equal" and returns false where equality would return true
+#### 1 !=  2     // true
+#### 1 != "1"    // false
+#### 1 != '1'    // false
+#### 1 != true   // false
+#### 0 != false  // false
+
+```javascript
+function testNotEqual(val) {
+  if (val != 99) { 
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+testNotEqual(10);
+```
+#### Here we get "Not Equal"
+
+---
+
+### Comparison with the Strict Inequality Operator
+#### The strict inequality operator (!==) is the logical opposite of the strict equality operator. It means "Strictly Not Equal" and returns false where strict equality would return true
+#### 3 !==  3   // false
+#### 3 !== '3'  // true
+#### 4 !==  3   // true
+
+```javascript
+function testStrictNotEqual(val) {
+    if (val !== 17) {
+        return "Not equal";
+    }
+    return "Equal";
+}
+console.log(testStrictNotEqual(10));
+```
+#### here we get not equal
+---
+
+### Comparison with the Greater Than Operator
+#### The greater than operator (>) compares the values of two numbers. If the number to the left is greater than the number to the right, it returns true. Otherwise, it returns false.
+#### 5   >  3   // true
+#### 7   > '3'  // true
+#### 2   >  3   // false
+#### '1' >  9   // false
+
+```javascript
+function testGreaterThenOperator(val) {
+    if (val > 100) {
+        return "over 100";
+    }
+    if (val > 10) {
+        return "over 10";
+    }
+    return "10 or under";
+}
+console.log(testGreaterThenOperator(10));
+```
+#### here we get "10 or under"
+---
+### Comparison with the Greater Than OperatorPassed
+#### The greater than or equal to operator (>=) compares the values of two numbers. If the number to the left is greater than or equal to the number to the right, it returns true. Otherwise, it returns false.
+#### 6   >=  6   // true
+#### 7   >= '3'  // true
+#### 2   >=  3   // false
+#### '7' >=  9   // false
+
+```javascript
+function greaterThenOrEqual(val) {
+    if (val >= 20) {
+        return "20 or over";
+    }
+    if (val >= 10) {
+        return "10 or over";
+    }
+    return "Less then 10";
+}
+console.log(greaterThenOrEqual(10));
+```
+
+#### here we get 10 of over
+---
+
+
+### Comparison with the Less Than Operator
+#### The less than operator (<) compares the values of two numbers. If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false. 
+#### 2   < 5  // true
+#### '3' < 7  // true
+#### 5   < 5  // false
+#### 3   < 2  // false
+#### '8' < 4  // false
+
+```javascript
+  function testLessThen(val) {
+        if (val < 25) {
+            return "Under 25";
+        }
+        if (val < 55){
+            return "Under 55";
+        }
+        return "55 or over";
+    }
+    console.log(testLessThen(10));
+```
+#### here we get Under 25
+---
+
+### Comparison with the Less Than Or Equal To Operator
+#### If the number to the left is less than or equal to the number to the right, it returns true. If the number on the left is greater than the number on the right, it returns false.
+#### 4   <= 5  // true
+####  '7' <= 7  // true
+####  5   <= 5  // true
+####  3   <= 2  // false
+####  '8' <= 4  // false
+
+```javascript
+function testLessOrEqual(val) {
+    if (val <= 12) {
+        return "Smaller or equal to 12";
+    }
+    if (val <= 24) {
+        return "Smaller or equal to 24";
+    }
+    return "More then 24";
+}
+console.log(testLessOrEqual(10));
+```
+#### here we get Smaller or equal to 12
+---
+
+### Comparisons with the Logical And Operator
+#### Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+
+```javascript
+
+
+function testLogicalEnd(val) {
+    if (val <=50 && val >= 25) {
+        return "Yes";
+    }
+    return "No";
+}
+console.log(testLogicalEnd(45));
+```
+#### here we get Yes
+---
+
+### Comparisons with the Logical Or Operator
+#### The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+
+```javascript
+function testLogicalOr(val) {
+    if (val < 10 || val > 20) {
+        return "Outside";
+    }
+    return "Insight";
+}
+console.log(testLogicalOr(1));
+```
+#### here we get Outside
+---
+
+### Introducing Else Statements
+#### When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.
+
+```javascript
+
+function testElse(val) {
+    if (val > 5) {
+        return "bigger then 5";
+    }
+    else{
+        return "less then 5";
+    }
+}
+console.log(testElse(4));
+```
+
+#### here we get less then 5
+---
+
+
+### Introducing Else If Statements
+#### If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
+
+```javascript
+function testElseIf(val) {
+    if (val > 10) {
+        return "greater than 10";
+    }
+    else if (val < 5) {
+        return "smaller then 5";
+    }
+    else{
+        return "in between";
+    }
+}
+console.log(testElseIf(7));
+```
+
+#### here we get in between
+---
+
+### Logical Order in If Else Statements
+#### Order is important in if, else if statements.The function is executed from top to bottom so you will want to be careful of what statement comes first.
+
+```javascript 
+function orderMyLogic(val) {
+    if (val < 5) {
+        return "less then 5";
+    }
+    else if (val < 10) {
+        return 'less then 10';
+    }
+    else {
+        return "greater then or equal to 10";
+    }
+}
+console.log(orderMyLogic(11));
+```
+
+#### here we get greater then or equal to 10
+---
+
+### Chaining If Else Statements
+#### if/else statements can be chained together for complex logic. Here is pseudocode of multiple chained if / else if statements:
+
+```javascript
+function chainingIfElse(val) {
+    if (val < 5) {
+        return "less then 5";
+    }
+    else if (val < 10) {
+        return "less then 10";
+    }
+    else if (val < 15) {
+        return "less then 15";
+    }
+    else if (val < 20) {
+        return "less then 20";
+    }
+    else {
+        return "more then 20";
+    }
+}
+console.log(chainingIfElse(21));
+```
+
+#### here we get more then 20
+---
+
+
+
+
+
+
+
+
+
 
 
