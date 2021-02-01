@@ -323,5 +323,3 @@ console.log(chainingIfElse(21));
 
 
 
-
-
