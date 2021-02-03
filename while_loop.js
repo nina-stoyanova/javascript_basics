@@ -224,3 +224,56 @@ var contacts = [
   }
   
   lookUpProfile("Akira", "likes");
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+// //1+2
+
+// var result = 0;
+
+// for( var i=1; i<=2; i++) {  // var i = 1// var i =2
+   
+//    result = result + i;     // result = 1  // result = 2
+// }
+// console.log(result);
+
+
+
+var array = [];
+
+
+for (i=1; i<=10; i++) {
+    array.push(i); 
+}
+
+console.log(array);
+
+for (i=1; i<array.length; i++) {
+    var element = array[i];
+   array[i] =  element * 3;
+
+}
+console.log(array);
+
+
+for (i=0; i<array.length; i++) {
+    var element = array[i];
+    if (element < 15) {
+      array.splice(i,1);
+    }
+
+}
+console.log(array);
